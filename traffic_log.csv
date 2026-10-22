@@ -1,0 +1,451 @@
+query_text,length,num_quotes,num_special_chars,has_sql_keyword,num_spaces,has_comment_marker,digit_ratio,response_time_ms,had_error,label
+Tara,4,0,0,0,0,0,0.0,0.15,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.3,0,malicious
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.83,0,malicious
+Ishita,6,0,0,0,0,0,0.0,0.21,0,benign
+Neha,4,0,0,0,0,0,0.0,0.25,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.43,0,malicious
+admin'--,8,1,3,1,0,1,0.0,0.15,0,malicious
+Dr,2,0,0,0,0,0,0.0,0.16,0,benign
+Tara,4,0,0,0,0,0,0.0,0.33,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.24,0,malicious
+admin'--,8,1,3,1,0,1,0.0,0.15,0,malicious
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.28,0,malicious
+ar,2,0,0,0,0,0,0.0,0.19,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.16,0,malicious
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.18,0,malicious
+Priya,5,0,0,0,0,0,0.0,0.21,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.15,0,benign
+,0,0,0,0,0,0,0,0.17,0,benign
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.2,0,malicious
+a,1,0,0,0,0,0,0.0,0.17,0,benign
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.3,0,malicious
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.15,0,malicious
+' OR 1=1--,10,1,4,1,2,1,0.2,0.38,0,malicious
+Tara,4,0,0,0,0,0,0.0,0.18,0,benign
+Sana,4,0,0,0,0,0,0.0,0.27,0,benign
+Karan,5,0,0,0,0,0,0.0,0.2,0,benign
+Sana,4,0,0,0,0,0,0.0,0.16,0,benign
+De,2,0,0,0,0,0,0.0,0.18,0,benign
+Dev,3,0,0,0,0,0,0.0,0.27,0,benign
+admin'--,8,1,3,1,0,1,0.0,0.39,0,malicious
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.25,0,malicious
+Arjun,5,0,0,0,0,0,0.0,0.17,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.21,1,malicious
+' OR ''=',9,4,5,1,2,0,0.0,0.28,0,malicious
+Kabir,5,0,0,0,0,0,0.0,0.16,0,benign
+ar,2,0,0,0,0,0,0.0,0.18,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.38,0,malicious
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.31,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.16,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.19,0,malicious
+Priya,5,0,0,0,0,0,0.0,0.3,0,benign
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.16,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.2,0,benign
+Vikr,4,0,0,0,0,0,0.0,0.16,0,benign
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.19,0,malicious
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.17,0,malicious
+admin'--,8,1,3,1,0,1,0.0,0.15,0,malicious
+admin'--,8,1,3,1,0,1,0.0,0.17,0,malicious
+Ishita,6,0,0,0,0,0,0.0,0.17,0,benign
+Dev,3,0,0,0,0,0,0.0,0.16,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.16,0,malicious
+Neh,3,0,0,0,0,0,0.0,0.18,0,benign
+Dev,3,0,0,0,0,0,0.0,0.21,0,benign
+Sana,4,0,0,0,0,0,0.0,0.16,0,benign
+Tara,4,0,0,0,0,0,0.0,0.15,0,benign
+Neha,4,0,0,0,0,0,0.0,0.15,0,benign
+Meera,5,0,0,0,0,0,0.0,0.18,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.16,0,malicious
+Dev,3,0,0,0,0,0,0.0,0.21,0,benign
+Ta,2,0,0,0,0,0,0.0,0.17,0,benign
+Dr,2,0,0,0,0,0,0.0,0.18,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.23,0,benign
+Sana,4,0,0,0,0,0,0.0,0.19,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.27,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.15,1,malicious
+ar,2,0,0,0,0,0,0.0,0.16,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.16,0,malicious
+De,2,0,0,0,0,0,0.0,0.15,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.27,0,malicious
+Me,2,0,0,0,0,0,0.0,0.2,0,benign
+,0,0,0,0,0,0,0,0.2,0,benign
+Sana,4,0,0,0,0,0,0.0,0.29,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.2,0,benign
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.18,0,malicious
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.16,0,malicious
+Anja,4,0,0,0,0,0,0.0,0.16,0,benign
+a,1,0,0,0,0,0,0.0,0.17,0,benign
+Dev,3,0,0,0,0,0,0.0,0.16,0,benign
+Ka,2,0,0,0,0,0,0.0,0.2,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.16,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.16,0,benign
+Sana,4,0,0,0,0,0,0.0,0.16,0,benign
+Is,2,0,0,0,0,0,0.0,0.2,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.19,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.17,0,malicious
+Aa,2,0,0,0,0,0,0.0,0.17,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.17,0,malicious
+Neha,4,0,0,0,0,0,0.0,0.23,0,benign
+Dr,2,0,0,0,0,0,0.0,0.23,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.15,0,malicious
+Ish,3,0,0,0,0,0,0.0,0.16,0,benign
+Priya,5,0,0,0,0,0,0.0,0.17,0,benign
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.16,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.29,0,benign
+Dr,2,0,0,0,0,0,0.0,0.21,0,benign
+Tara,4,0,0,0,0,0,0.0,0.17,0,benign
+Sana,4,0,0,0,0,0,0.0,0.2,0,benign
+Kara,4,0,0,0,0,0,0.0,0.25,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.27,0,malicious
+Sana,4,0,0,0,0,0,0.0,0.29,0,benign
+Is,2,0,0,0,0,0,0.0,0.26,0,benign
+Karan,5,0,0,0,0,0,0.0,0.15,0,benign
+Dev,3,0,0,0,0,0,0.0,0.16,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.18,0,malicious
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.19,0,malicious
+Sa,2,0,0,0,0,0,0.0,0.18,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.17,0,malicious
+Arjun,5,0,0,0,0,0,0.0,0.31,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.15,1,malicious
+Karan,5,0,0,0,0,0,0.0,0.16,0,benign
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.3,0,malicious
+Rohan,5,0,0,0,0,0,0.0,0.15,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.23,0,benign
+Karan,5,0,0,0,0,0,0.0,0.15,0,benign
+Karan,5,0,0,0,0,0,0.0,0.16,0,benign
+Anjali,6,0,0,0,0,0,0.0,0.15,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.22,0,malicious
+a,1,0,0,0,0,0,0.0,0.18,0,benign
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.16,0,malicious
+' OR ''=',9,4,5,1,2,0,0.0,0.31,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.16,0,benign
+Tara,4,0,0,0,0,0,0.0,0.24,0,benign
+Kabir,5,0,0,0,0,0,0.0,0.15,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.19,0,benign
+Arjun,5,0,0,0,0,0,0.0,0.17,0,benign
+Neh,3,0,0,0,0,0,0.0,0.46,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.16,0,benign
+Tara,4,0,0,0,0,0,0.0,0.28,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.17,0,benign
+Priya,5,0,0,0,0,0,0.0,0.33,0,benign
+Priya,5,0,0,0,0,0,0.0,0.2,0,benign
+Sana,4,0,0,0,0,0,0.0,0.32,0,benign
+Kab,3,0,0,0,0,0,0.0,0.3,0,benign
+' OR 1=1--,10,1,4,1,2,1,0.2,0.16,0,malicious
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.14,1,malicious
+Priya,5,0,0,0,0,0,0.0,0.22,0,benign
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.33,0,malicious
+Me,2,0,0,0,0,0,0.0,0.15,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.16,0,malicious
+' OR ''=',9,4,5,1,2,0,0.0,0.16,0,malicious
+a,1,0,0,0,0,0,0.0,0.33,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.15,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.26,0,malicious
+Neha,4,0,0,0,0,0,0.0,0.19,0,benign
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.18,0,malicious
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.15,0,malicious
+Kabir,5,0,0,0,0,0,0.0,0.15,0,benign
+ar,2,0,0,0,0,0,0.0,0.16,0,benign
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.18,0,malicious
+Meera,5,0,0,0,0,0,0.0,0.19,0,benign
+ar,2,0,0,0,0,0,0.0,0.2,0,benign
+Karan,5,0,0,0,0,0,0.0,0.19,0,benign
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.15,0,malicious
+ar,2,0,0,0,0,0,0.0,0.18,0,benign
+Tara,4,0,0,0,0,0,0.0,0.18,0,benign
+Ne,2,0,0,0,0,0,0.0,0.18,0,benign
+Priya,5,0,0,0,0,0,0.0,0.15,0,benign
+Dev,3,0,0,0,0,0,0.0,0.18,0,benign
+Sana,4,0,0,0,0,0,0.0,0.17,0,benign
+Priya,5,0,0,0,0,0,0.0,0.26,0,benign
+Anjali,6,0,0,0,0,0,0.0,0.35,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.18,0,malicious
+' OR 1=1--,10,1,4,1,2,1,0.2,0.16,0,malicious
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.2,0,malicious
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.39,1,malicious
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.17,0,malicious
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.27,0,malicious
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.2,0,malicious
+Vikram,6,0,0,0,0,0,0.0,0.18,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.17,0,benign
+Sana,4,0,0,0,0,0,0.0,0.23,0,benign
+Sana,4,0,0,0,0,0,0.0,0.25,0,benign
+Karan,5,0,0,0,0,0,0.0,0.21,0,benign
+Neha,4,0,0,0,0,0,0.0,0.16,0,benign
+Dev,3,0,0,0,0,0,0.0,0.15,0,benign
+Dev,3,0,0,0,0,0,0.0,0.19,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.26,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.17,0,malicious
+Arjun,5,0,0,0,0,0,0.0,0.2,0,benign
+a,1,0,0,0,0,0,0.0,0.2,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.19,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.17,0,benign
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.46,0,malicious
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.27,0,malicious
+Neha,4,0,0,0,0,0,0.0,0.28,0,benign
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.17,0,malicious
+' OR ''=',9,4,5,1,2,0,0.0,0.16,0,malicious
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.18,1,malicious
+Vi,2,0,0,0,0,0,0.0,0.15,0,benign
+Pr,2,0,0,0,0,0,0.0,0.16,0,benign
+admin'--,8,1,3,1,0,1,0.0,0.25,0,malicious
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.2,0,malicious
+Tara,4,0,0,0,0,0,0.0,0.35,0,benign
+admin'--,8,1,3,1,0,1,0.0,0.32,0,malicious
+Vikra,5,0,0,0,0,0,0.0,0.16,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.18,0,benign
+Arjun,5,0,0,0,0,0,0.0,0.21,0,benign
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.18,0,malicious
+Meera,5,0,0,0,0,0,0.0,0.15,0,benign
+e,1,0,0,0,0,0,0.0,0.16,0,benign
+Priya,5,0,0,0,0,0,0.0,0.16,0,benign
+Vikr,4,0,0,0,0,0,0.0,0.17,0,benign
+Aa,2,0,0,0,0,0,0.0,0.18,0,benign
+' AND SLEEP(2)--,16,1,5,1,2,1,0.0625,0.27,1,malicious
+' AND SLEEP(2)--,16,1,5,1,2,1,0.0625,0.28,1,malicious
+Karan,5,0,0,0,0,0,0.0,0.17,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.2,0,malicious
+a,1,0,0,0,0,0,0.0,0.21,0,benign
+Meera,5,0,0,0,0,0,0.0,0.19,0,benign
+Kabir,5,0,0,0,0,0,0.0,0.16,0,benign
+Karan,5,0,0,0,0,0,0.0,0.19,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.14,1,malicious
+Rohan,5,0,0,0,0,0,0.0,0.23,0,benign
+Neha,4,0,0,0,0,0,0.0,0.18,0,benign
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.24,0,malicious
+Sana,4,0,0,0,0,0,0.0,0.17,0,benign
+Is,2,0,0,0,0,0,0.0,0.15,0,benign
+' OR 1=1--,10,1,4,1,2,1,0.2,0.2,0,malicious
+Tar,3,0,0,0,0,0,0.0,0.16,0,benign
+e,1,0,0,0,0,0,0.0,0.15,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.2,0,benign
+a,1,0,0,0,0,0,0.0,0.21,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.17,0,malicious
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.19,0,malicious
+' OR 1=1--,10,1,4,1,2,1,0.2,0.25,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.15,0,benign
+Sana,4,0,0,0,0,0,0.0,0.2,0,benign
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.4,0,malicious
+a,1,0,0,0,0,0,0.0,0.2,0,benign
+e,1,0,0,0,0,0,0.0,0.17,0,benign
+Ishita,6,0,0,0,0,0,0.0,0.16,0,benign
+Anjali,6,0,0,0,0,0,0.0,0.18,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.24,0,malicious
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.16,0,malicious
+,0,0,0,0,0,0,0,0.16,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.14,1,malicious
+admin'--,8,1,3,1,0,1,0.0,0.14,0,malicious
+Vik,3,0,0,0,0,0,0.0,0.19,0,benign
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.15,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.15,0,benign
+,0,0,0,0,0,0,0,0.16,0,benign
+Arjun,5,0,0,0,0,0,0.0,0.19,0,benign
+Anjali,6,0,0,0,0,0,0.0,0.15,0,benign
+Priya,5,0,0,0,0,0,0.0,0.19,0,benign
+Meera,5,0,0,0,0,0,0.0,0.17,0,benign
+Is,2,0,0,0,0,0,0.0,0.19,0,benign
+a,1,0,0,0,0,0,0.0,0.21,0,benign
+Ishita,6,0,0,0,0,0,0.0,0.17,0,benign
+Ka,2,0,0,0,0,0,0.0,0.16,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.18,1,malicious
+Sana,4,0,0,0,0,0,0.0,0.27,0,benign
+Neha,4,0,0,0,0,0,0.0,0.19,0,benign
+Roha,4,0,0,0,0,0,0.0,0.2,0,benign
+' OR 1=1--,10,1,4,1,2,1,0.2,0.2,0,malicious
+' OR 1=1--,10,1,4,1,2,1,0.2,0.28,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.21,0,benign
+Meera,5,0,0,0,0,0,0.0,0.2,0,benign
+e,1,0,0,0,0,0,0.0,0.15,0,benign
+Neha,4,0,0,0,0,0,0.0,0.21,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.27,0,malicious
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.15,0,malicious
+' OR ''=',9,4,5,1,2,0,0.0,0.17,0,malicious
+Rohan,5,0,0,0,0,0,0.0,0.18,0,benign
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.16,0,malicious
+Kabir,5,0,0,0,0,0,0.0,0.16,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.45,0,malicious
+Priya,5,0,0,0,0,0,0.0,0.31,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.25,0,benign
+Priya,5,0,0,0,0,0,0.0,0.19,0,benign
+Karan,5,0,0,0,0,0,0.0,0.2,0,benign
+Karan,5,0,0,0,0,0,0.0,0.2,0,benign
+Neha,4,0,0,0,0,0,0.0,0.15,0,benign
+Ishita,6,0,0,0,0,0,0.0,0.34,0,benign
+a,1,0,0,0,0,0,0.0,0.18,0,benign
+,0,0,0,0,0,0,0,0.17,0,benign
+' AND SLEEP(2)--,16,1,5,1,2,1,0.0625,0.18,1,malicious
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.18,0,malicious
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.24,0,malicious
+Anjali,6,0,0,0,0,0,0.0,0.7,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.17,0,malicious
+' OR 1=1--,10,1,4,1,2,1,0.2,0.16,0,malicious
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.16,1,malicious
+Meer,4,0,0,0,0,0,0.0,0.32,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.2,0,benign
+Dev,3,0,0,0,0,0,0.0,0.17,0,benign
+Arjun,5,0,0,0,0,0,0.0,0.21,0,benign
+' OR 1=1--,10,1,4,1,2,1,0.2,0.2,0,malicious
+Ishita,6,0,0,0,0,0,0.0,0.19,0,benign
+Sana,4,0,0,0,0,0,0.0,0.2,0,benign
+Neh,3,0,0,0,0,0,0.0,0.15,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.17,0,benign
+Dev,3,0,0,0,0,0,0.0,0.21,0,benign
+Kabir,5,0,0,0,0,0,0.0,0.19,0,benign
+Priya,5,0,0,0,0,0,0.0,0.16,0,benign
+a,1,0,0,0,0,0,0.0,0.35,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.16,1,malicious
+Kabir,5,0,0,0,0,0,0.0,0.15,0,benign
+Dev,3,0,0,0,0,0,0.0,0.2,0,benign
+a,1,0,0,0,0,0,0.0,0.18,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.22,0,malicious
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.26,0,malicious
+admin'--,8,1,3,1,0,1,0.0,0.2,0,malicious
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.18,0,malicious
+ar,2,0,0,0,0,0,0.0,0.2,0,benign
+Neh,3,0,0,0,0,0,0.0,0.15,0,benign
+Ar,2,0,0,0,0,0,0.0,0.24,0,benign
+Anjali,6,0,0,0,0,0,0.0,0.33,0,benign
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.18,0,malicious
+Pr,2,0,0,0,0,0,0.0,0.15,0,benign
+Kabir,5,0,0,0,0,0,0.0,0.17,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.19,0,malicious
+Sana,4,0,0,0,0,0,0.0,0.27,0,benign
+Arjun,5,0,0,0,0,0,0.0,0.19,0,benign
+Priya,5,0,0,0,0,0,0.0,0.29,0,benign
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.25,0,malicious
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.17,0,malicious
+Arjun,5,0,0,0,0,0,0.0,0.15,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.25,0,malicious
+,0,0,0,0,0,0,0,0.25,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.17,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.2,0,malicious
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.17,0,malicious
+San,3,0,0,0,0,0,0.0,0.2,0,benign
+Aarav,5,0,0,0,0,0,0.0,0.15,0,benign
+Dr,2,0,0,0,0,0,0.0,0.3,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.16,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.17,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.21,0,benign
+Ishita,6,0,0,0,0,0,0.0,0.17,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.16,0,benign
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.16,0,malicious
+Anjali,6,0,0,0,0,0,0.0,0.16,0,benign
+Ka,2,0,0,0,0,0,0.0,0.18,0,benign
+' OR 1=1--,10,1,4,1,2,1,0.2,0.16,0,malicious
+Anjali,6,0,0,0,0,0,0.0,0.18,0,benign
+Neha,4,0,0,0,0,0,0.0,0.21,0,benign
+Ro,2,0,0,0,0,0,0.0,0.17,0,benign
+Tara,4,0,0,0,0,0,0.0,0.18,0,benign
+ar,2,0,0,0,0,0,0.0,0.15,0,benign
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.21,0,malicious
+Sana,4,0,0,0,0,0,0.0,0.2,0,benign
+Tara,4,0,0,0,0,0,0.0,0.15,0,benign
+Kar,3,0,0,0,0,0,0.0,0.19,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.16,0,benign
+Dev,3,0,0,0,0,0,0.0,0.16,0,benign
+,0,0,0,0,0,0,0,0.24,0,benign
+Neha,4,0,0,0,0,0,0.0,0.47,0,benign
+Anjali,6,0,0,0,0,0,0.0,0.23,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.15,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.39,0,malicious
+Anjali,6,0,0,0,0,0,0.0,0.2,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.24,0,malicious
+Priy,4,0,0,0,0,0,0.0,0.19,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.15,0,benign
+Priya,5,0,0,0,0,0,0.0,0.15,0,benign
+Dev,3,0,0,0,0,0,0.0,0.16,0,benign
+Kabir,5,0,0,0,0,0,0.0,0.16,0,benign
+admin'--,8,1,3,1,0,1,0.0,0.16,0,malicious
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.17,0,malicious
+ar,2,0,0,0,0,0,0.0,0.19,0,benign
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.29,0,malicious
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.19,0,malicious
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.18,0,malicious
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.39,0,malicious
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.16,0,malicious
+Tara,4,0,0,0,0,0,0.0,0.15,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.16,0,benign
+1' OR '1'='1,12,4,5,1,2,0,0.25,0.15,0,malicious
+Sana,4,0,0,0,0,0,0.0,0.16,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.15,0,benign
+a,1,0,0,0,0,0,0.0,0.3,0,benign
+a,1,0,0,0,0,0,0.0,0.26,0,benign
+Dev,3,0,0,0,0,0,0.0,0.19,0,benign
+Dr,2,0,0,0,0,0,0.0,0.16,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.19,0,malicious
+Priya,5,0,0,0,0,0,0.0,0.16,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.2,0,malicious
+Roh,3,0,0,0,0,0,0.0,0.39,0,benign
+Anjali,6,0,0,0,0,0,0.0,0.17,0,benign
+Sana,4,0,0,0,0,0,0.0,0.15,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.21,0,malicious
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.26,0,malicious
+Rohan,5,0,0,0,0,0,0.0,0.17,0,benign
+' OR '1'='1' LIMIT 1--,22,5,8,1,4,1,0.13636363636363635,0.16,0,malicious
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.14,1,malicious
+,0,0,0,0,0,0,0,0.44,0,benign
+Dev,3,0,0,0,0,0,0.0,0.37,0,benign
+Arjun,5,0,0,0,0,0,0.0,0.2,0,benign
+Priya,5,0,0,0,0,0,0.0,0.21,0,benign
+Dev,3,0,0,0,0,0,0.0,0.18,0,benign
+Priya,5,0,0,0,0,0,0.0,0.17,0,benign
+Meer,4,0,0,0,0,0,0.0,0.29,0,benign
+' OR 1=1--,10,1,4,1,2,1,0.2,0.2,0,malicious
+Meera,5,0,0,0,0,0,0.0,0.19,0,benign
+Meera,5,0,0,0,0,0,0.0,0.18,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.24,0,benign
+admin'--,8,1,3,1,0,1,0.0,0.16,0,malicious
+Rohan,5,0,0,0,0,0,0.0,0.19,0,benign
+Neha,4,0,0,0,0,0,0.0,0.16,0,benign
+"' UNION SELECT 1,2,3,4--",24,1,3,1,3,1,0.16666666666666666,0.24,0,malicious
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.29,0,malicious
+,0,0,0,0,0,0,0,0.3,0,benign
+Dr,2,0,0,0,0,0,0.0,0.17,0,benign
+Dr,2,0,0,0,0,0,0.0,0.15,0,benign
+Priya,5,0,0,0,0,0,0.0,0.16,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.15,0,malicious
+Vi,2,0,0,0,0,0,0.0,0.16,0,benign
+Anj,3,0,0,0,0,0,0.0,0.31,0,benign
+Anjal,5,0,0,0,0,0,0.0,0.15,0,benign
+' OR 'x'='x,11,4,5,1,2,0,0.0,0.2,0,malicious
+Anjali,6,0,0,0,0,0,0.0,0.22,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.17,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.32,0,benign
+' OR ''=',9,4,5,1,2,0,0.0,0.17,0,malicious
+ar,2,0,0,0,0,0,0.0,0.15,0,benign
+Dr,2,0,0,0,0,0,0.0,0.21,0,benign
+' OR 1=1--,10,1,4,1,2,1,0.2,0.17,0,malicious
+Aarav,5,0,0,0,0,0,0.0,0.16,0,benign
+"' UNION SELECT username, password, role, role FROM users--",58,1,3,1,8,1,0.0,0.19,0,malicious
+Arjun,5,0,0,0,0,0,0.0,0.15,0,benign
+Arju,4,0,0,0,0,0,0.0,0.19,0,benign
+a,1,0,0,0,0,0,0.0,0.16,0,benign
+Neha,4,0,0,0,0,0,0.0,0.19,0,benign
+Dev,3,0,0,0,0,0,0.0,0.27,0,benign
+Arjun,5,0,0,0,0,0,0.0,0.15,0,benign
+Sana,4,0,0,0,0,0,0.0,0.24,0,benign
+Dev,3,0,0,0,0,0,0.0,0.15,0,benign
+Kab,3,0,0,0,0,0,0.0,0.18,0,benign
+ar,2,0,0,0,0,0,0.0,0.29,0,benign
+Priya,5,0,0,0,0,0,0.0,0.34,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.16,0,benign
+Dr,2,0,0,0,0,0,0.0,0.15,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.29,1,malicious
+Dev,3,0,0,0,0,0,0.0,0.16,0,benign
+Priya,5,0,0,0,0,0,0.0,0.16,0,benign
+Aa,2,0,0,0,0,0,0.0,0.16,0,benign
+a,1,0,0,0,0,0,0.0,0.18,0,benign
+Dev,3,0,0,0,0,0,0.0,0.15,0,benign
+Vikram,6,0,0,0,0,0,0.0,0.29,0,benign
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.16,0,malicious
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.15,0,malicious
+' OR '1'='1,11,4,5,1,2,0,0.18181818181818182,0.2,0,malicious
+Karan,5,0,0,0,0,0,0.0,0.2,0,benign
+""" OR ""1""=""1",11,4,5,1,2,0,0.18181818181818182,0.2,0,malicious
+Aarav,5,0,0,0,0,0,0.0,0.21,0,benign
+Kabi,4,0,0,0,0,0,0.0,0.15,0,benign
+'; DROP TABLE patients;--,25,1,5,1,3,1,0.0,0.15,1,malicious
+Dev,3,0,0,0,0,0,0.0,0.23,0,benign
+Rohan,5,0,0,0,0,0,0.0,0.2,0,benign
+Sana,4,0,0,0,0,0,0.0,0.16,0,benign

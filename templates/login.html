@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Hospital | Staff Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-page">
+    <main class="login-card">
+        <div class="brand-icon">+</div>
+        <p class="eyebrow">CITY HOSPITAL</p>
+        <h1>Staff Portal</h1>
+        <p class="muted">Sign in to access the hospital demonstration system.</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('login') }}" method="POST">
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter your staff username"
+                autocomplete="username"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit" class="button primary full-width">
+                Sign in securely
+            </button>
+        </form>
+
+        <div class="demo-notice">
+            <strong>Academic demonstration</strong>
+            <p>Uses synthetic hospital records. Not for real patient care.</p>
+        </div>
+
+        <footer>Hospital Cybersecurity Capstone · Demo Environment</footer>
+    </main>
+</body>
+</html>

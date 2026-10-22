@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Dashboard | City Hospital</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="{{ url_for('portal') }}">
+            <span class="brand-icon small">+</span>
+            City Hospital Security
+        </a>
+        <nav>
+            <a href="{{ url_for('portal') }}">Patient Portal</a>
+            <a href="{{ url_for('logout') }}">Log out</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">SECURITY OPERATIONS</p>
+                <h1>Monitoring Dashboard</h1>
+                <p class="muted">Audit activity and model-generated alerts for the lab environment.</p>
+            </div>
+            <span class="count-badge">DEMO ENVIRONMENT</span>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-label">Audit events</span>
+                <strong>{{ audit_logs|length }}</strong>
+                <span class="muted">Events returned by the server</span>
+            </article>
+            <article class="stat-card">
+                <span class="stat-label">Security alerts</span>
+                <strong>{{ alerts|length }}</strong>
+                <span class="muted">Recorded detector alerts</span>
+            </article>
+            <article class="stat-card">
+                <span class="stat-label">Detection approach</span>
+                <strong>AI / ML</strong>
+                <span class="muted">Predictions require review</span>
+            </article>
+        </section>
+
+        <section class="panel">
+            <h2>Recent security alerts</h2>
+            {% if alerts %}
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Detection type</th>
+                                <th>Details</th>
+                                <th>Prediction</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for alert in alerts %}
+                                <tr>
+                                    <td>{{ alert.timestamp }}</td>
+                                    <td>{{ alert.detection_type }}</td>
+                                    <td>{{ alert.details }}</td>
+                                    <td><span class="count-badge">{{ alert.prediction }}</span></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <h3>No alerts recorded</h3>
+                    <p>Alerts will appear here after the backend records detector results.</p>
+                </div>
+            {% endif %}
+        </section>
+
+        <section class="panel">
+            <h2>Recent audit events</h2>
+            {% if audit_logs %}
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>User</th>
+                                <th>Action</th>
+                                <th>Target</th>
+                                <th>Outcome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for event in audit_logs %}
+                                <tr>
+                                    <td>{{ event.timestamp }}</td>
+                                    <td>{{ event.username }}</td>
+                                    <td>{{ event.action }}</td>
+                                    <td>{{ event.target }}</td>
+                                    <td>{{ event.outcome }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <h3>No audit events available</h3>
+                    <p>The backend must save events before they can appear here.</p>
+                </div>
+            {% endif %}
+        </section>
+
+        <p class="disclaimer">
+            This dashboard displays lab data. ML predictions are not confirmed attacks.
+        </p>
+    </main>
+</body>
+</html>

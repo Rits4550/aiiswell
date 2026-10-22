@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | City Hospital</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="{{ url_for('portal') }}">
+            <span class="brand-icon small">+</span>
+            City Hospital
+        </a>
+        <nav>
+            <a href="{{ url_for('portal') }}">Patient Portal</a>
+            <a href="{{ url_for('logout') }}">Log out</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">PATIENT DIRECTORY</p>
+                <h1>Search Results</h1>
+                <p class="muted">Results from the synthetic hospital database.</p>
+            </div>
+            <a class="button secondary" href="{{ url_for('portal') }}">Back to portal</a>
+        </section>
+
+        <section class="panel">
+            <h2>Search summary</h2>
+            <p>Search term: <strong>{{ query }}</strong></p>
+            <p class="muted">{{ patients|length }} matching record(s)</p>
+
+            {% if patients %}
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Patient name</th>
+                                <th>Condition</th>
+                                <th>Assigned doctor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for patient in patients %}
+                                <tr>
+                                    <td>{{ patient.id }}</td>
+                                    <td>{{ patient.name }}</td>
+                                    <td>{{ patient.condition }}</td>
+                                    <td>{{ patient.doctor }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <h3>No matching patients</h3>
+                    <p>Try a different search term.</p>
+                </div>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

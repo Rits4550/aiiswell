@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Hospital | Patient Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="{{ url_for('portal') }}">
+            <span class="brand-icon small">+</span>
+            City Hospital
+        </a>
+        <nav>
+            <a href="{{ url_for('portal') }}">Patients</a>
+            {% if session.get('role') == 'admin' %}
+                <a href="{{ url_for('dashboard') }}">Security Dashboard</a>
+            {% endif %}
+            <a href="{{ url_for('logout') }}">Log out</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">HOSPITAL INFORMATION SYSTEM</p>
+                <h1>Patient Records</h1>
+                <p class="muted">Search the synthetic records available in this demo.</p>
+            </div>
+            <div class="user-chip">
+                <span class="status-dot"></span>
+                {{ session.get('username', 'Staff') }}
+                <span class="role">{{ session.get('role', 'staff') }}</span>
+            </div>
+        </section>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="message {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <section class="panel">
+            <h2>Find a patient</h2>
+            <p class="muted">Enter a name to search the demonstration database.</p>
+
+            <form action="{{ url_for('search') }}" method="GET" class="search-form">
+                <input
+                    type="search"
+                    name="q"
+                    value="{{ query|default('') }}"
+                    placeholder="Search patient name..."
+                    aria-label="Patient name"
+                    required
+                >
+                <button class="button primary" type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-label">Available demo records</span>
+                <strong>{{ patients|length }}</strong>
+                <span class="muted">Synthetic data only</span>
+            </article>
+            <article class="stat-card">
+                <span class="stat-label">Current access level</span>
+                <strong class="role-value">{{ session.get('role', 'staff')|title }}</strong>
+                <span class="muted">Assigned demo role</span>
+            </article>
+            <article class="stat-card">
+                <span class="stat-label">Security</span>
+                <strong>Monitored</strong>
+                <span class="muted">Events logged by the backend</span>
+            </article>
+        </section>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Patient directory</h2>
+                    <p class="muted">Only records authorised for your account should be displayed.</p>
+                </div>
+                <span class="count-badge">{{ patients|length }} records</span>
+            </div>
+
+            {% if patients %}
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Patient ID</th>
+                                <th>Name</th>
+                                <th>Condition</th>
+                                <th>Assigned doctor</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for patient in patients %}
+                                <tr>
+                                    <td>{{ patient.id }}</td>
+                                    <td>{{ patient.name }}</td>
+                                    <td>{{ patient.condition }}</td>
+                                    <td>{{ patient.doctor }}</td>
+                                    <td>
+                                        <a class="text-link"
+                                           href="{{ url_for('patient_detail', patient_id=patient.id) }}">
+                                            View record
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <h3>No records found</h3>
+                    <p>Try another name or clear the search.</p>
+                    <a class="button secondary" href="{{ url_for('portal') }}">Show all records</a>
+                </div>
+            {% endif %}
+        </section>
+
+        <p class="disclaimer">
+            Training environment only. All patient information is fictional.
+            Never enter real patient or medical information.
+        </p>
+    </main>
+</body>
+</html>
