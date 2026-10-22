@@ -96,6 +96,23 @@ def initialise_database():
             prediction TEXT NOT NULL
         );
     """)
+    
+    # Safely add new audit columns to an existing demo database.
+    audit_columns = {
+        row["name"]
+        for row in conn.execute("PRAGMA table_info(audit_logs)").fetchall()
+    }
+
+    if "source_ip" not in audit_columns:
+        conn.execute(
+            "ALTER TABLE audit_logs ADD COLUMN source_ip TEXT NOT NULL DEFAULT ''"
+        )
+
+    if "user_agent" not in audit_columns:
+        conn.execute(
+            "ALTER TABLE audit_logs ADD COLUMN user_agent TEXT NOT NULL DEFAULT ''"
+        )
+
 
     # Seed demo accounts only if they don't already exist.
     demo_users = [
@@ -316,11 +333,14 @@ def dashboard():
     conn = get_db()
 
     audit_logs = conn.execute(
-        """
-        SELECT timestamp, username, action, target, outcome
-        FROM audit_logs ORDER BY id DESC LIMIT 100
-        """
-    ).fetchall()
+    """
+    SELECT timestamp, username, action, target, outcome,
+           source_ip, user_agent
+    FROM audit_logs
+    ORDER BY id DESC
+    LIMIT 100
+    """
+).fetchall()
 
     alerts = conn.execute(
         """
