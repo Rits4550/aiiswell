@@ -1,6 +1,17 @@
-.env
-.env.*
-!.env.example
+# Local databases and backups
 *.db
 *.db-wal
 *.db-shm
+
+# Generated traffic and logs
+traffic_log.csv
+dos_traffic_log.csv
+dos_requests.log
+
+# Local code backups
+app_patched_backup.py
+
+# Local environment
+.env
+.env.*
+!.env.example

@@ -14,12 +14,14 @@ DB_PATH = os.path.join(BASE_DIR, "hospital.db")
 
 app = Flask(__name__)
 
-# Development fallback only. Set HOSPITAL_SECRET_KEY in your environment
-# before using this application beyond a local demonstration.
-app.secret_key = os.environ.get(
-    "HOSPITAL_SECRET_KEY",
-    "local-demo-key-change-before-deployment"
-)
+
+app.config["SECRET_KEY"] = os.environ.get("HOSPITAL_SECRET_KEY")
+
+if not app.config["SECRET_KEY"]:
+    raise RuntimeError(
+        "HOSPITAL_SECRET_KEY is not set. "
+        "Configure it before starting the application."
+    )
 
 app.config.update(
     SESSION_COOKIE_HTTPONLY=True,

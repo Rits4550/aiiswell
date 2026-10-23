@@ -92,6 +92,8 @@
                                 <th>Action</th>
                                 <th>Target</th>
                                 <th>Outcome</th>
+                                <th>Source IP</th>
+                                <th>Browser</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -102,6 +104,8 @@
                                     <td>{{ event.action }}</td>
                                     <td>{{ event.target }}</td>
                                     <td>{{ event.outcome }}</td>
+                                    <td>{{ event.source_ip }}</td>
+                                    <td>{{ event.user_agent }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>
