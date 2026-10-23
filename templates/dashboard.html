@@ -40,11 +40,6 @@
                 <strong>{{ alerts|length }}</strong>
                 <span class="muted">Recorded detector alerts</span>
             </article>
-            <article class="stat-card">
-                <span class="stat-label">Detection approach</span>
-                <strong>AI / ML</strong>
-                <span class="muted">Predictions require review</span>
-            </article>
         </section>
 
         <section class="panel">
@@ -63,7 +58,7 @@
                         <tbody>
                             {% for alert in alerts %}
                                 <tr>
-                                    <td>{{ alert.timestamp }}</td>
+                                    <td>{{ alert.timestamp | replace('T', ' ') }}</td>
                                     <td>{{ alert.detection_type }}</td>
                                     <td>{{ alert.details }}</td>
                                     <td><span class="count-badge">{{ alert.prediction }}</span></td>
@@ -99,7 +94,7 @@
                         <tbody>
                             {% for event in audit_logs %}
                                 <tr>
-                                    <td>{{ event.timestamp }}</td>
+                                    <td>{{ event.timestamp | replace('T', ' ') }}</td>
                                     <td>{{ event.username }}</td>
                                     <td>{{ event.action }}</td>
                                     <td>{{ event.target }}</td>

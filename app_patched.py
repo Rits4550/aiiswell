@@ -1,8 +1,11 @@
 
 import os
 import sqlite3
+import time
+import threading
 from functools import wraps
-from datetime import datetime, timezone
+from datetime import datetime
+from zoneinfo import ZoneInfo 
 from flask import (
     Flask, render_template, request, redirect, url_for,
     session, flash, abort
@@ -11,8 +14,20 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "hospital.db")
+DOS_LOG_PATH = os.path.join(BASE_DIR, "dos_requests.log")
+dos_log_lock = threading.Lock()
 
 app = Flask(__name__)
+@app.after_request
+def log_request_timestamp(response):
+    try:
+        with dos_log_lock:
+            with open(DOS_LOG_PATH, "a") as log_file:
+                log_file.write(f"{time.time()}\n")
+    except OSError as exc:
+        app.logger.error("Could not write DoS request log: %s", exc)
+
+    return response
 
 
 app.config["SECRET_KEY"] = os.environ.get("HOSPITAL_SECRET_KEY")
@@ -48,7 +63,7 @@ def audit_event(username, action, target="", outcome="success"):
             VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
             (
-                datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                datetime.now(ZoneInfo("Asia/Kolkata")).isoformat(timespec="seconds"),
                 username or "anonymous",
                 action,
                 str(target)[:150],
